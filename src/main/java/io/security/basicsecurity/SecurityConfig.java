@@ -1,24 +1,19 @@
 package io.security.basicsecurity;
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.web.authentication.AuthenticationFailureHandler;
-import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
-import org.springframework.security.web.authentication.logout.LogoutHandler;
-import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter { // WebSecurityConfigurerAdapter deprecated
+
+    @Autowired
+    UserDetailsService userDetailsService;
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
@@ -46,27 +41,38 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter { // WebSecurit
 //                }
 //            })
 //            .permitAll(); // /loginPage 에 인증이 없어도 누구나 이 경로로는 접근이 가능하도록 설정
+//        http
+//            .logout()
+//            .logoutUrl("/logout")
+//            .logoutSuccessUrl("/login")
+//            .addLogoutHandler(new LogoutHandler() {
+//                @Override
+//                public void logout(HttpServletRequest request, HttpServletResponse response,
+//                    Authentication authentication) {
+//                    HttpSession session = request.getSession();
+//                    session.invalidate();
+//                }
+//            })
+//            .logoutSuccessHandler(new LogoutSuccessHandler() {
+//                @Override
+//                public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response,
+//                    Authentication authentication) throws IOException, ServletException {
+//                    System.out.println("logout");
+//                    response.sendRedirect("/login");
+//                }
+//            }) // 그 다음 동작을 할 수 있도록 handler
+//            .deleteCookies("remember-me") // 로그아웃 할 때 삭제하고 싶은 쿠키 이름
+//            .and()
+//            .rememberMe() // rememberMe 기능 활성화
+//            .rememberMeParameter("remember-me") // remember 파라미터기능을 설정할수있다.
+//            .tokenValiditySeconds(3600) // default 는 14일이다.
+//            .userDetailsService(userDetailsService) // user 정보 조회하는 기능처리
+//        ;
+
+
         http
-            .logout()
-            .logoutUrl("/logout")
-            .logoutSuccessUrl("/login")
-            .addLogoutHandler(new LogoutHandler() {
-                @Override
-                public void logout(HttpServletRequest request, HttpServletResponse response,
-                    Authentication authentication) {
-                    HttpSession session = request.getSession();
-                    session.invalidate();
-                }
-            })
-            .logoutSuccessHandler(new LogoutSuccessHandler() {
-                @Override
-                public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response,
-                    Authentication authentication) throws IOException, ServletException {
-                    System.out.println("logout");
-                    response.sendRedirect("/login");
-                }
-            }) // 그 다음 동작을 할 수 있도록 handler
-            .deleteCookies("remember-me") // 로그아웃 할 때 삭제하고 싶은 쿠키 이름
-        ;
+            .sessionManagement()
+            .maximumSessions(1)
+            .maxSessionsPreventsLogin(true);
     }
 }
