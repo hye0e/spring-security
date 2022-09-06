@@ -4,7 +4,7 @@
   - Authentication 객체가 저장되는 보관소로 필요 시 언제든지 Authentication 객체를 꺼내어 쓸 수 있도록 제공되는 클래스
   - ThreadLocal 에 저장되어 아무 곳에서나 참조가 가능하도록 설계함
   - 인증이 완료되면 HttpSession에 저장되어 어플리케이션 전반에 걸쳐 전역적인 참조가 가능하다
-    <br>
+  <br>
 - SecurityContextHolder
   - SecurityContext를 감싸는 holder
   - SecurityContext 객체 저장 방식
