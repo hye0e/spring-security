@@ -1,12 +1,10 @@
-# 
-
 # AuthenticationProvider
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1a3e4cab-5e0f-43f5-96fe-7688c98a4828/Untitled.png)
 
 - interface
 - 2개의 메소드 제공
-    1. authenticate(authentication)
+    1. **authenticate(authentication)**
         - 전달받은 파라미터에는 사용자가 입력한 ID/PW가 존재
         - 자기를 위임한 필터로부터 받은 인증객체를 전달
         1. ID 검증
@@ -18,5 +16,5 @@
         3. 추가 검증
             - 최종적으로 Authentication객체에 (user, authorities) 반환
             - 인증객체를 AuthenticationManager에게 전달
-    2. supports
+    2. **supports**
         - 인증을 처리할수있는 요건 충족이 되는 지 검증
