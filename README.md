@@ -16,3 +16,5 @@ Core Spring Security
 - [인증 저장소 - SecurityContextHolder, SecurityContext](https://github.com/hye0e/spring-security/blob/main/%EC%A0%95%EB%A6%AC/%EC%9D%B8%EC%A6%9D%20%EC%A0%80%EC%9E%A5%EC%86%8C%20-%20SecurityContextHolder,%20SecurityContext.md)
 - [인증 저장소 필터 - SecurityContextPersistenceFilter](https://github.com/hye0e/spring-security/blob/main/%EC%A0%95%EB%A6%AC/SecurityContextPersistenceFilter.md)
 - [인증 흐름 이해 - Authentication Flow](https://github.com/hye0e/spring-security/blob/main/%EC%A0%95%EB%A6%AC/%EC%9D%B8%EC%A6%9D%20%ED%9D%90%EB%A6%84%20%EC%9D%B4%ED%95%B4%20-%20Authentication%20Flow.md)
+- [인증 처리자 - AuthenticationProvider](https://github.com/hye0e/spring-security/blob/main/%EC%A0%95%EB%A6%AC/%EC%9D%B8%EC%A6%9D%20%EC%B2%98%EB%A6%AC%EC%9E%90%20-%20AuthenticationProvider.md)
+
