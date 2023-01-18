@@ -24,7 +24,8 @@
     - ACCESS_DENIED: 접근 거부(0)
     - ACCESS_ABSTAIN: 접근 보류(-1)
         - Voter 가 해당 타입의 요청에 대해 결정을 내릴 수 없는 경우
-
+        
+<img width="923" alt="image" src="https://user-images.githubusercontent.com/46226445/213164309-aa7e8862-74bc-4e4f-adcb-23ba9ad48811.png">
 1. FilterSecurityInterceptor 인가처리
 2. AccessDecisionManager가 3개의 파라미터(인증 정보, 요청 정보, 권한 정보) 를 근거로해서 인가처리여부 결정
 3. AccessDecision의 return 값에 따라 권한판단을 심사
