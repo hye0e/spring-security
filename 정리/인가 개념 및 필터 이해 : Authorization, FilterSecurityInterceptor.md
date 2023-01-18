@@ -1,5 +1,3 @@
-# 
-
 # Authorization
 
 - 당신에게 무엇이 허가 되었는지 증명하는 것
@@ -31,7 +29,7 @@ Spring Security는 2가지 영역으로 구성되어있음
 - 권한 제어 방식 중 HTTP 자원의 보안을 처리하는 필터
 - 권한 처리를 AccessDecisionManager 에게 맡김
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fdf3f492-290d-4deb-86da-9c70e3c62d59/Untitled.png)
+<img width="1031" alt="image" src="https://user-images.githubusercontent.com/46226445/213156173-85295b90-5970-4543-b6c9-b0e3cc22a9d3.png">
 
 1. **사용자가 가지고 있는 인증객체의 존재 여부 체크**
     1. 없다면 → AutjenticationException → ExceptionTranslationFilter
