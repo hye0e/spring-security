@@ -1,4 +1,3 @@
-# 
 
 # Authorization
 
@@ -31,18 +30,19 @@ Spring Security는 2가지 영역으로 구성되어있음
 - 권한 제어 방식 중 HTTP 자원의 보안을 처리하는 필터
 - 권한 처리를 AccessDecisionManager 에게 맡김
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fdf3f492-290d-4deb-86da-9c70e3c62d59/Untitled.png)
+<img width="1031" alt="image" src="https://user-images.githubusercontent.com/46226445/213156173-85295b90-5970-4543-b6c9-b0e3cc22a9d3.png">
 
 1. **사용자가 가지고 있는 인증객체의 존재 여부 체크**
     1. 없다면 → AutjenticationException → ExceptionTranslationFilter 
     2. 있다면 → SecurityMetadataSource (사용자가 요청한 자원에 필요한 권한 정보 조회해서 전달)
-    구
+   
 2. **권한정보의 존재 여부**
     1. null 일 경우 권한 심사 하지 않음 → 모든 자원 접근 허용 
     2. 존재한다면 AccessDecisionManager (최종 심의 결정자) 에게 전달
     3. 심의 요청 AccessDecisionVoter (심의자)가 
         1. 승인
         2. 거부
+        
 3. **접근 승인**
     1. 승인: 자원 접근 허용
     2. 거부: AccessDeniedException → ExceptionTranslationFilter
