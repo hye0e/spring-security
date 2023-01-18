@@ -38,8 +38,8 @@ Spring Security는 2가지 영역으로 구성되어있음
    
 2. **권한정보의 존재 여부**
     1. null 일 경우 권한 심사 하지 않음 → 모든 자원 접근 허용 
-    2. 존재한다면 AccessDecisionManager (최종 심의 결정자) 에게 전달
-    3. 심의 요청 AccessDecisionVoter (심의자)가 
+    2. 존재한다면 [AccessDecisionManager(최종 심의 결정자)](https://github.com/hye0e/spring-security/blob/main/%EC%A0%95%EB%A6%AC/%EC%9D%B8%EA%B0%80%20%EA%B2%B0%EC%A0%95%20%EC%8B%AC%EC%9D%98%EC%9E%90%20-%20AccessDecisionManager,%20AccessDecisionVoter.md) 에게 전달
+    3. 심의 요청 AccessDecisionVoter(심의자)가 
         1. 승인
         2. 거부
         
