@@ -1,6 +1,5 @@
 # AuthenticationProvider
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1a3e4cab-5e0f-43f5-96fe-7688c98a4828/Untitled.png)
+<img width="1371" alt="image" src="https://user-images.githubusercontent.com/46226445/212480734-e2d91cb9-63ab-46eb-b78f-1fa18ac9eae9.png">
 
 - interface
 - 2개의 메소드 제공
