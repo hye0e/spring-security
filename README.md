@@ -19,3 +19,4 @@ Core Spring Security
 - [인증 처리자 - AuthenticationProvider](https://github.com/hye0e/spring-security/blob/main/%EC%A0%95%EB%A6%AC/%EC%9D%B8%EC%A6%9D%20%EC%B2%98%EB%A6%AC%EC%9E%90%20-%20AuthenticationProvider.md)
 - [인가 개념 및 필터 이해 : Authorization, FilterSecurityInterceptor](https://github.com/hye0e/spring-security/blob/main/%EC%A0%95%EB%A6%AC/%EC%9D%B8%EA%B0%80%20%EA%B0%9C%EB%85%90%20%EB%B0%8F%20%ED%95%84%ED%84%B0%20%EC%9D%B4%ED%95%B4%20:%20Authorization,%20FilterSecurityInterceptor.md)
 - [인가 결정 심의자 - AccessDecisionManager, AccessDecisionVoter](https://github.com/hye0e/spring-security/blob/main/%EC%A0%95%EB%A6%AC/%EC%9D%B8%EA%B0%80%20%EA%B2%B0%EC%A0%95%20%EC%8B%AC%EC%9D%98%EC%9E%90%20-%20AccessDecisionManager,%20AccessDecisionVoter.md)
+- [스프링 시큐리티 전체 아키텍처 이해](https://hye0.tistory.com/entry/Spring-Securiy-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0-%EC%A3%BC%EC%9A%94-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98)
